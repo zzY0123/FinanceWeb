@@ -6,16 +6,24 @@ import { NewstockComponent } from './view/newstock/newstock.component'
 
 const routes: Routes = [
   {
-    path: 'index',
-    component: IndexComponent
-  }, 
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: IndexComponent,
+    pathMatch: 'full'
+  },
   {
     path: 'choose',
-    component: ChooseComponent
-  }, 
+    component: ChooseComponent,
+    pathMatch: 'full'
+  },
   {
     path: 'newstock',
-    component: NewstockComponent
+    component: NewstockComponent,
+    pathMatch: 'full'
   }
 ];
 
