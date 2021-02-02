@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import axios from 'axios';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.getDate()
+  }
 
   ngOnInit(): void {
+  }
+
+  async getDate() {
+    const httpUrl = 'http://localhost:8080/api/index/quote'
+    let result = await axios.get(httpUrl)
   }
 
 }
