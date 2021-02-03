@@ -18,6 +18,9 @@ export class IndexComponent implements OnInit {
   async getDate() {
     const httpUrl = 'http://localhost:8080/api/index/quote'
     let result = await axios.get(httpUrl)
+    this._quoteList = result.data.data.item
   }
+
+  private _quoteList = []
 
 }
